@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCE8F374-3775-4B7B-AEF6-89C330C61D27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppointmentAccessor.cs" />
+    <Compile Include="AppointmentAccessorMock.cs" />
+    <Compile Include="AppointmentTypeAccessor.cs" />
+    <Compile Include="AppointmentTypeAccessorMock.cs" />
+    <Compile Include="BuildingAccessor.cs" />
+    <Compile Include="CheckoutReceiptAccessor.cs" />
+    <Compile Include="CheckoutReceiptAccessorMock.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DepartmentAccessor.cs" />
+    <Compile Include="EmployeeAccessor.cs" />
+    <Compile Include="EmployeeAccessorMock.cs" />
+    <Compile Include="EmpRolesAccessor.cs" />
+    <Compile Include="EventAccessor.cs" />
+    <Compile Include="EventPerformanceAccessor.cs" />
+    <Compile Include="EventSponsorAccessor.cs" />
+    <Compile Include="EventTypeAccessor.cs" />
+    <Compile Include="GuestAccessor.cs" />
+    <Compile Include="GuestAccessorMock.cs" />
+    <Compile Include="EventTypeAccessorMock.cs" />
+    <Compile Include="GuestRoomAssignmentAccessor.cs" />
+    <Compile Include="GuestRoomAssignmentMock.cs" />
+    <Compile Include="GuestVehicleAccessor.cs" />
+    <Compile Include="GuestVehicleAccessorMock.cs" />
+    <Compile Include="HouseKeepingRequestAccessorMock.cs" />
+    <Compile Include="HouseKeepingRequestAccessorMSSQL.cs" />
+    <Compile Include="IAppointmentAccessor.cs" />
+    <Compile Include="IAppointmentTypeAccessor.cs" />
+    <Compile Include="IBuildingAccessor.cs" />
+    <Compile Include="GuestTypeAccessor.cs" />
+    <Compile Include="ICheckoutReceiptAccessor.cs" />
+    <Compile Include="IDepartmentAccessor.cs" />
+    <Compile Include="IEmployeeAccessor.cs" />
+    <Compile Include="IEmpRolesAccessor.cs" />
+    <Compile Include="IEventAccessor.cs" />
+    <Compile Include="IGuestAccessor.cs" />
+    <Compile Include="IEventTypeAccessor.cs" />
+    <Compile Include="IGuestRoomAssignmentAccessor.cs" />
+    <Compile Include="IGuestTypeAccessor.cs" />
+    <Compile Include="IGuestVehicleAccessor.cs" />
+    <Compile Include="IHouseKeepingRequestAccessor.cs" />
+    <Compile Include="IInspectionAccessor.cs" />
+    <Compile Include="IInternalOrderAccessor.cs" />
+    <Compile Include="IItemAccessor.cs" />
+    <Compile Include="IItemTypeAccessor.cs" />
+    <Compile Include="IItemSupplierAccessor.cs" />
+    <Compile Include="ILuggageAccessor.cs" />
+    <Compile Include="IMaintenanceStatusTypeAccessor.cs" />
+    <Compile Include="IMaintenanceTypeAccessor.cs" />
+    <Compile Include="IMaintenanceWorkOrderAccessor.cs" />
+    <Compile Include="IMemberAccessor.cs" />
+    <Compile Include="IMessageAccessor.cs" />
+    <Compile Include="IMemberTabAccessor.cs" />
+    <Compile Include="IMemberTabLineAccessor.cs" />
+    <Compile Include="InspectionAccessor.cs" />
+    <Compile Include="InternalOrderAccessor.cs" />
+    <Compile Include="InternalOrderAccessorMock.cs" />
+    <Compile Include="IOfferingAccessor.cs" />
+    <Compile Include="IPerformanceAccessor.cs" />
+    <Compile Include="IPetAccessor.cs" />
+    <Compile Include="IPetTypeAccessor.cs" />
+    <Compile Include="IPickAccessor.cs" />
+    <Compile Include="IReceivingAccessor.cs" />
+    <Compile Include="IRecipeAccessor.cs" />
+    <Compile Include="IReservationAccessor.cs" />
+    <Compile Include="IResortPropertyAccessor.cs" />
+    <Compile Include="IResortPropertyTypeAccessor.cs" />
+    <Compile Include="IResortVehicleCheckoutAccessor.cs" />
+    <Compile Include="IResortVehicleStatusAccessor.cs" />
+    <Compile Include="IRoleAccessor.cs" />
+    <Compile Include="IRoomAccessor.cs" />
+    <Compile Include="IRoomReservationAccessor.cs" />
+    <Compile Include="ISetupAccessor.cs" />
+    <Compile Include="ISetupListAccessor.cs" />
+    <Compile Include="IShopAccessor.cs" />
+    <Compile Include="IRoomTypeAccessor.cs" />
+    <Compile Include="IShuttleReservationAccessor.cs" />
+    <Compile Include="ISpecialOrderAccessor.cs" />
+    <Compile Include="ISponsorAccessor.cs" />
+    <Compile Include="ISupplierOrderAccessor.cs" />
+    <Compile Include="ItemAccessor.cs" />
+    <Compile Include="ItemAccessorMock.cs" />
+    <Compile Include="ItemSupplierAccessor.cs" />
+    <Compile Include="ItemSupplierAccessorMock.cs" />
+    <Compile Include="ISupplierAccessor.cs" />
+    <Compile Include="ItemTypeAccessorMock.cs" />
+    <Compile Include="ItemTypeAccessorMSSQL.cs" />
+    <Compile Include="IThreadAccessor.cs" />
+    <Compile Include="IResortVehicleAccessor.cs" />
+    <Compile Include="LuggageAccessor.cs" />
+    <Compile Include="MaintenanceStatusTypeAccessorMSSQL.cs" />
+    <Compile Include="MaintenanceTypeAccessorMSSQL.cs" />
+    <Compile Include="MaintenanceWorkOrderAccessorMock.cs" />
+    <Compile Include="MaintenanceWorkOrderAccessorMSSQL.cs" />
+    <Compile Include="MemberAccessorMock.cs" />
+    <Compile Include="MemberAccessorMSSQL.cs" />
+    <Compile Include="MemberTabAccessorMock.cs" />
+    <Compile Include="MessageAccessorMock.cs" />
+    <Compile Include="MessageAccessorMSSQL.cs" />
+    <Compile Include="BuildingAccessorMock.cs" />
+    <Compile Include="MemberTabAccessor.cs" />
+    <Compile Include="MemberTabLineAccessor.cs" />
+    <Compile Include="MockDepartmentAccessor.cs" />
+    <Compile Include="MockEmpRolesAccessor.cs" />
+    <Compile Include="MockEventAccessor.cs" />
+    <Compile Include="MockGuestTypeAccessor.cs" />
+    <Compile Include="MockLuggageAccessor.cs" />
+    <Compile Include="MockRoomAccessor.cs" />
+    <Compile Include="MockRoomTypeAccessor.cs" />
+    <Compile Include="MockResortVehicleAccessor.cs" />
+    <Compile Include="OfferingAccessor.cs" />
+    <Compile Include="OfferingAccessorMock.cs" />
+    <Compile Include="PerformanceAccessor.cs" />
+    <Compile Include="PerformanceAccessorMock.cs" />
+    <Compile Include="PetAccessor.cs" />
+    <Compile Include="PetAccessorMock.cs" />
+    <Compile Include="PetTypeAccessor.cs" />
+    <Compile Include="PetTypeAccessorMock.cs" />
+    <Compile Include="PickAccessor.cs" />
+    <Compile Include="PickAccessorMock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceivingAccessor.cs" />
+    <Compile Include="ReceivingAccessorMock.cs" />
+    <Compile Include="RecipeAccessor.cs" />
+    <Compile Include="RecipeAccessorMock.cs" />
+    <Compile Include="ReservationAccessorMock.cs" />
+    <Compile Include="ReservationAccessorMSSQL.cs" />
+    <Compile Include="ResortPropertyAccessor.cs" />
+    <Compile Include="ResortPropertyTypeAccessor.cs" />
+    <Compile Include="ResortVehicleCheckoutAccessor.cs" />
+    <Compile Include="ResortVehicleStatusAccessor.cs" />
+    <Compile Include="RoleAccessor.cs" />
+    <Compile Include="RoleAccessorMock.cs" />
+    <Compile Include="RoomAccessor.cs" />
+    <Compile Include="RoomReservationAccessor.cs" />
+    <Compile Include="SetupAccessor.cs" />
+    <Compile Include="SetupAccessorMock.cs" />
+    <Compile Include="SetupListAccessor.cs" />
+    <Compile Include="SetupListAccessorMock.cs" />
+    <Compile Include="ShopAccessorMock.cs" />
+    <Compile Include="ShopAccessorMSSQL.cs" />
+    <Compile Include="RoomTypeAccessor.cs" />
+    <Compile Include="ShuttleReservationAccessor.cs" />
+    <Compile Include="ShuttleReservationAccessorMock.cs" />
+    <Compile Include="SpecialOrderAccessorMock.cs" />
+    <Compile Include="SpecialOrderAccessorMSSQL.cs" />
+    <Compile Include="SponsorAccessor.cs" />
+    <Compile Include="SponsorAccessorMock.cs" />
+    <Compile Include="SupplierAccessor.cs" />
+    <Compile Include="SupplierAccessorMock.cs" />
+    <Compile Include="SupplierOrderAccessor.cs" />
+    <Compile Include="SupplierOrderAccessorMock.cs" />
+    <Compile Include="ThreadAccessorMock.cs" />
+    <Compile Include="ThreadAccessorMSSQL.cs" />
+    <Compile Include="UserAccessor.cs" />
+    <Compile Include="ResortVehicleAccessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{8cdc4843-eeba-4e27-bb76-c179fb0cae70}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExceptionLoggerLogic\ExceptionLoggerLogic.csproj">
+      <Project>{9b36dc60-da48-44a9-9bc6-1f4d6daa2816}</Project>
+      <Name>ExceptionLoggerLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7AEF3D3-8CF5-468C-AC1D-98B5E4B1CFA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddDepartment.xaml.cs" />
+    <Compile Include="AddGuestType.xaml.cs" />
+    <Compile Include="AddLuggage.xaml.cs" />
+    <Compile Include="AddPerformance.xaml.cs" />
+    <Compile Include="AddSpecialOrder.xaml.cs" />
+    <Compile Include="BrowseAppointment.xaml.cs" />
+    <Compile Include="BrowseAppointmentType.xaml.cs" />
+    <Compile Include="BrowseAvailableRooms.xaml.cs">
+      <DependentUpon>BrowseAvailableRooms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseBuilding.xaml.cs">
+      <DependentUpon>BrowseBuilding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoles.xaml.cs" />
+    <Compile Include="AddRoom.xaml.cs" />
+    <Compile Include="BrowseEmployee.xaml.cs">
+      <DependentUpon>BrowseEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseEmployeeRole.xaml.cs" />
+    <Compile Include="BrowseGuests.xaml.cs">
+      <DependentUpon>BrowseGuests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseEventType.xaml.cs" />
+    <Compile Include="BrowseGuestVehicles.xaml.cs">
+      <DependentUpon>BrowseGuestVehicles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseItem.cs" />
+    <Compile Include="BrowseMaintenanceWorkOrders.xaml.cs" />
+    <Compile Include="BrowseOrders.xaml.cs">
+      <DependentUpon>BrowseOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowsePetType.xaml.cs" />
+    <Compile Include="BrowseReceiving.xaml.cs" />
+    <Compile Include="BrowseReservation.xaml.cs" />
+    <Compile Include="BrowseSetup.xaml.cs">
+      <DependentUpon>BrowseSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseSetupList.xaml.cs">
+      <DependentUpon>BrowseSetupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseShop.xaml.cs">
+      <DependentUpon>BrowseShop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseShuttleReservation.xaml.cs" />
+    <Compile Include="BrowseSpecialOrder.xaml.cs" />
+    <Compile Include="BrowseSponsor.xaml.cs" />
+    <Compile Include="BrowseSupplier.xaml.cs">
+      <DependentUpon>BrowseSupplier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingDetail.xaml.cs">
+      <DependentUpon>BuildingDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAppointmentType.xaml.cs" />
+    <Compile Include="CreateEventType.xaml.cs" />
+    <Compile Include="CreateHouseKeepingRequest.xaml.cs" />
+    <Compile Include="CreateItem.cs" />
+    <Compile Include="CreateMaintenanceWorkOrder.xaml.cs" />
+    <Compile Include="CreatePetType.xaml.cs" />
+    <Compile Include="CtrlThreadParticipantAdder.xaml.cs">
+      <DependentUpon>CtrlThreadParticipantAdder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeactivateHouseKeepingRequest.xaml.cs" />
+    <Compile Include="DeactivateMaintenanceWorkOrder.xaml.cs" />
+    <Compile Include="DeleteAppointmentType.xaml.cs" />
+    <Compile Include="DeleteDepartment.xaml.cs" />
+    <Compile Include="DeleteEventType.xaml.cs" />
+    <Compile Include="DeleteGuestType.xaml.cs" />
+    <Compile Include="DeletePetType.xaml.cs" />
+    <Compile Include="DeleteRole.xaml.cs" />
+    <Compile Include="DeleteRoom.xaml.cs" />
+    <Compile Include="Departments.xaml.cs" />
+    <Compile Include="EditLuggage.xaml.cs" />
+    <Compile Include="EmployeeRoles.xaml.cs" />
+    <Compile Include="frmAddEditSponsor.xaml.cs" />
+    <Compile Include="FrmAddMessageThreadParticipants.xaml.cs">
+      <DependentUpon>FrmAddMessageThreadParticipants.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBrowseShuttleVehicles.xaml.cs">
+      <DependentUpon>FrmBrowseShuttleVehicles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmInbox.xaml.cs">
+      <DependentUpon>frmInbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckoutPrompt.xaml.cs">
+      <DependentUpon>FrmCheckoutPrompt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckoutPromptTwo.xaml.cs">
+      <DependentUpon>FrmCheckoutPromptTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventPerformanceMain.xaml.cs">
+      <DependentUpon>frmEventPerformanceMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventSponsorMain.xaml.cs">
+      <DependentUpon>frmEventSponsorMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageResortProperty.xaml.cs">
+      <DependentUpon>FrmManageResortProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageShuttleVehicle.xaml.cs">
+      <DependentUpon>FrmManageShuttleVehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmMember.xaml.cs" />
+    <Compile Include="frmAddEditGuest.xaml.cs">
+      <DependentUpon>frmAddEditGuest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditPet.xaml.cs" />
+    <Compile Include="frmBrowseRecipes.xaml.cs" />
+    <Compile Include="frmConfirmAction.xaml.cs" />
+    <Compile Include="frmCreateRecipe.xaml.cs" />
+    <Compile Include="frmNewMessage.xaml.cs">
+      <DependentUpon>frmNewMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmOffering.xaml.cs">
+      <DependentUpon>frmOffering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPickOrders.xaml.cs">
+      <DependentUpon>frmPickOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservationCheckout.xaml.cs">
+      <DependentUpon>frmReservationCheckout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResortPropertyType.xaml.cs">
+      <DependentUpon>FrmResortPropertyType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResortVehicleCheckout.xaml.cs">
+      <DependentUpon>FrmResortVehicleCheckout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRecipeItem.xaml.cs" />
+    <Compile Include="frmAddEditViewAppointment.xaml.cs">
+      <DependentUpon>frmAddEditViewAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageSupplierOrders.xaml.cs">
+      <DependentUpon>frmManageSupplierOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPetMain.xaml.cs" />
+    <Compile Include="frmSelectGuestForAppointment.xaml.cs">
+      <DependentUpon>frmSelectGuestForAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontDeskTemplate.xaml.cs" />
+    <Compile Include="GuestMemberRoomDetail.xaml.cs">
+      <DependentUpon>GuestMemberRoomDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuestTypes.xaml.cs" />
+    <Compile Include="GuestVehicleDetail.xaml.cs">
+      <DependentUpon>GuestVehicleDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionDetail.xaml.cs">
+      <DependentUpon>InspectionDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Items.xaml.cs" />
+    <Compile Include="MemberTabDetail.xaml.cs">
+      <DependentUpon>MemberTabDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberTabList.xaml.cs">
+      <DependentUpon>MemberTabList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRecieving.xaml.cs" />
+    <Compile Include="PickSheetReport.xaml.cs">
+      <DependentUpon>PickSheetReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Read_BrowseOrder.xaml.cs" />
+    <Compile Include="RoomTypes.xaml.cs" />
+    <Compile Include="SetupDetail.xaml.cs">
+      <DependentUpon>SetupDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SetupListDetail.xaml.cs">
+      <DependentUpon>SetupListDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShuttleReservationDetail.xaml.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="viewAccount.xaml.cs" />
+    <Compile Include="ViewPerformance.xaml.cs" />
+    <Compile Include="WalkInAppointmentDetail.xaml.cs" />
+    <Page Include="AddDepartment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AddGuestType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AddLuggage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AddPerformance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AddSpecialOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseAppointment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseAppointmentType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseAvailableRooms.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseBuilding.xaml">
+    </Page>
+    <Page Include="AddRoles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AddRoom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BrowseEmployeeRole.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseGuests.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseEventType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseGuestVehicles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseMaintenanceWorkOrders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseOrders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowsePetType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseReceiving.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseReservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseSetup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseSetupList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseShop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseShuttleReservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseSpecialOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BrowseSponsor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BuildingDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateAppointmentType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateEmployeeRole.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateEventType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateHouseKeepingRequest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateMaintenanceWorkOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreatePetType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateReservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateShop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CtrlThreadParticipantAdder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeactivateHouseKeepingRequest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeactivateMaintenanceWorkOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeactivateReservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteAppointmentType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteDepartment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteEventType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteGuestType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeletePetType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteRole.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteRoom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Departments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DevLauncher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditLuggage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EmployeeDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeRoles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditGuest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditPet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditSponsor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditSupplierOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditViewAppointment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditViewRoom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddItemSupplierForItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FrmAddMessageThreadParticipants.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmBrowseRecipes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FrmBrowseShuttleVehicles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmCheckoutPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmCheckoutPromptTwo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConfirmAction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmCreateRecipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmEventDeleteConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmEventMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmInbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmEventPerformanceMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmEventSponsorMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmManageItemSuppliers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FrmManageResortProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmManageShuttleVehicle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmManageSupplierOrders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmMember.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmNewMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmOffering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmPetMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmPickOrders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmReservationCheckout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmResortPropertyType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmResortVehicleCheckout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRoomManagment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmSelectRecipeItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmSelectGuestForAppointment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmSupplier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmUpdatePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontDeskTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GuestMemberRoomDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GuestTypes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GuestVehicleDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InspectionDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InternalOrderDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Items.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CreateEmployeeRole.xaml.cs" />
+    <Compile Include="CreateReservation.xaml.cs" />
+    <Compile Include="CreateShop.xaml.cs" />
+    <Compile Include="DeactivateReservation.xaml.cs" />
+    <Compile Include="DevLauncher.xaml.cs">
+      <DependentUpon>DevLauncher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDetail.xaml.cs">
+      <DependentUpon>EmployeeDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEvent.xaml.cs" />
+    <Compile Include="frmAddEditSupplierOrder.xaml.cs" />
+    <Compile Include="frmAddEditViewRoom.xaml.cs">
+      <DependentUpon>frmAddEditViewRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItemSupplierForItem.xaml.cs" />
+    <Compile Include="frmEventDeleteConfirmation.xaml.cs" />
+    <Compile Include="frmEventMain.xaml.cs" />
+    <Compile Include="frmManageItemSuppliers.xaml.cs" />
+    <Compile Include="frmRoomManagment.xaml.cs">
+      <DependentUpon>frmRoomManagment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.xaml.cs" />
+    <Compile Include="frmUpdatePassword.xaml.cs">
+      <DependentUpon>frmUpdatePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InternalOrderDetail.xaml.cs">
+      <DependentUpon>InternalOrderDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="BrowseSupplier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MemberTabDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MemberTabList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderRecieving.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PerformanceViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PickSheetReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Read_BrowseOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RoomTypes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SetupDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SetupListDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShuttleReservationDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StyleSheet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="viewAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewPerformance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WalkInAppointmentDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PerformanceViewer.xaml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="PickSheet.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{CCE8F374-3775-4B7B-AEF6-89C330C61D27}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{8cdc4843-eeba-4e27-bb76-c179fb0cae70}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExceptionLoggerLogic\ExceptionLoggerLogic.csproj">
+      <Project>{9b36dc60-da48-44a9-9bc6-1f4d6daa2816}</Project>
+      <Name>ExceptionLoggerLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{0e18f616-f9a8-4ceb-8bf3-7a75a99a3457}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\default.png" />
+    <Resource Include="Resources\pet1.jpg" />
+    <Resource Include="Resources\pet2.JPG" />
+    <Resource Include="Resources\pet3.jpg" />
+    <Resource Include="Resources\pet4.jpg" />
+    <Resource Include="Resources\pet5.jpg" />
+    <Resource Include="Resources\pet6.jpg" />
+    <Resource Include="Resources\pet7.jpg" />
+    <Resource Include="Resources\pet8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MillenialResortDesktop.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Receipts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
