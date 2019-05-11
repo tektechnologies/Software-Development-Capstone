@@ -1,0 +1,41 @@
+<!-- starts page -->
+<!-- starts head section -->
+<!doctype html>
+<html lang="en-US">
+<head>
+	<title>Object Oriented - PHP - Unit 1</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Bailey Borchert">
+	
+	<meta name="viewport" content="width=device-width">
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main_style.css" rel="stylesheet">
+</head>
+<!-- ends head section -->
+<!-- starts body -->
+<body>
+	<main class="container">
+		<header>
+			<h1>Banner Section</h1>
+		</header>
+		<nav>
+			<h2>Navigation Section</h2>
+		</nav>
+		<div class="main_content">
+			<article></article>
+			<aside></aside>
+			<section></section>
+		</div>
+		<nav>
+			<h2>Footer</h2>
+		</nav>
+	</main>
+</body>
+<!-- ends body -->
+</html>
+<!-- starts html page-->

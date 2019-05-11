@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Inconsolata|Kosugi|Nanum+Gothic+Coding|Oxygen+Mono');
+
+body {
+	background-color: #1a2127;
+}
+
+#home_img {
+	width: 100%;
+	margin-top: 2.5em;
+}
+
+.container {
+	background-color: #cedaf2;
+}
+
+.navbar {
+	font-family: 'Oxygen Mono', monospace;
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+	top: 0px;
+}
+
+.navbar-brand {
+	font-size: 2em;
+}
+
+.nav-item {
+	padding-left: 10px;
+}
+
+.bg-dark {
+	background-color: #003b5c !important;
+}
+
+.footer {
+	color: #444446;
+	font-size: .6em;
+	padding: 1em 5em;
+	position: bottom;
+	display: block;
+}
+
+.footer a {
+	color: #555555;
+}

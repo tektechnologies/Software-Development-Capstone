@@ -1,0 +1,4 @@
+EventRequest should have fields that keep track of Items (food) that will be at the event.
+EventOrders can then be created to keep track of what will be needed. 
+The AutomationOrder class should then process through EventOrders to see what is required
+and then create Orders based on what we already have vs what needs to be submitted in an Order.
